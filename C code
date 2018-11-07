@@ -3,7 +3,7 @@
 int main(void) {
 
 	int grade;
-	printf("Enter student grade:" );
+	printf("Enter student grade: ");
 	grade = getchar();
 	printf("\nStudents grade is: ");
 	putchar(grade);
