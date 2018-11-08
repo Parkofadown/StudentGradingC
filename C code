@@ -1,34 +1,43 @@
 #include <stdio.h>
+#include<stdlib.h>
+#define exit -1
+
 int main(void) {
 
-int grade;
-
-printf("Enter student grade: ");
-scanf_s("%d", &grade);
-printf("Students grade is: %d",grade);
-
+	int grade;
 	
-if (grade < 65)
-	{
-	printf("\nStudent grade is: F\n");
-	}
-else if (grade <= 69)
-	{
-	printf("\nStudent grade is: D\n");
-	}
-else if (grade <= 79) 
-	{
-	printf("\nStudent grade is: C\n");
-	}
-else if (grade <= 89) 
-	{
-	printf("\nStudent grade is: B\n");
 
+	printf("Enter student grade , or '-1' to exit \n");
+	scanf_s("%d", &grade);
+	while (grade != exit) {
+		printf("Students grade is: %d", grade);
+		if (grade < 65)
+		{
+			printf("\nStudent grade is: F\n");
+		}
+		else if (grade <= 69)
+		{
+			printf("\nStudent grade is: D\n");
+		}
+		else if (grade <= 79)
+		{
+			printf("\nStudent grade is: C\n");
+		}
+		else if (grade <= 89)
+		{
+			printf("\nStudent grade is: B\n");
+
+		}
+		else if (grade <= 100)
+		{
+			printf("\nStudent grade is: A\n");
+		}
+		else if (grade == exit) {
+			exit;
+		}
+		printf("Enter student grade , or '-1' to exit \n");
+		scanf_s("%d", &grade);
 	}
-else if (grade <= 100) 
-	{
-	printf("\nStudent grade is: A\n");
-	}
+	fgetc(stdin);
 	return 0;
-
 }
