@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
 #define exit -1
 
 int main(void) {
 
 	int grade;
-	
+
 
 	printf("Enter student grade , or '-1' to exit \n");
 	scanf_s("%d", &grade);
@@ -32,9 +32,15 @@ int main(void) {
 		{
 			printf("\nStudent grade is: A\n");
 		}
-		else if (grade == exit) {
-			exit;
+		else if (grade > 100)
+		{
+			printf("\nYou have entered an invalid number.\n");
 		}
+		else (grade == exit);
+			 {
+			exit;
+			 }
+
 		printf("Enter student grade , or '-1' to exit \n");
 		scanf_s("%d", &grade);
 	}
